@@ -5,6 +5,9 @@ export default {
     minWidth: {
       30: "30%",
     },
+    scale: {
+      101: "1.01",
+    },
     extend: {},
   },
   plugins: [],
