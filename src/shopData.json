@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Brown Sun Hat",
+    "imageUrl": "",
+    "price": 25
+  },
+  {
+    "id": 2,
+    "name": "Red Beanie",
+    "imageUrl": "",
+    "price": 18
+  },
+  {
+    "id": 3,
+    "name": "Brown Cowboy Hat",
+    "imageUrl": "",
+    "price": 35
+  },
+  {
+    "id": 4,
+    "name": "Black Fedora",
+    "imageUrl": "",
+    "price": 25
+  },
+  {
+    "id": 5,
+    "name": "Green Beanie",
+    "imageUrl": "",
+    "price": 18
+  },
+  {
+    "id": 6,
+    "name": "Palm Tree Cap",
+    "imageUrl": "",
+    "price": 14
+  },
+  {
+    "id": 7,
+    "name": "Black Flat Cap",
+    "imageUrl": "",
+    "price": 18
+  },
+  {
+    "id": 8,
+    "name": "Baseball Cap",
+    "imageUrl": "",
+    "price": 14
+  },
+  {
+    "id": 9,
+    "name": "Black Snapback",
+    "imageUrl": "",
+    "price": 16
+  }
+]
