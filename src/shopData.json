@@ -2,55 +2,55 @@
   {
     "id": 1,
     "name": "Brown Sun Hat",
-    "imageUrl": "",
+    "imageUrl": "https://i.imgur.com/hBSAcrN.jpeg",
     "price": 25
   },
   {
     "id": 2,
     "name": "Red Beanie",
-    "imageUrl": "",
+    "imageUrl": "https://i.imgur.com/leDq3iI.jpeg",
     "price": 18
   },
   {
     "id": 3,
     "name": "Brown Cowboy Hat",
-    "imageUrl": "",
+    "imageUrl": "https://i.imgur.com/KeHlTlx.jpeg",
     "price": 35
   },
   {
     "id": 4,
     "name": "Black Fedora",
-    "imageUrl": "",
+    "imageUrl": "https://i.imgur.com/lqIGtVP.jpeg",
     "price": 25
   },
   {
     "id": 5,
     "name": "Green Beanie",
-    "imageUrl": "",
+    "imageUrl": "https://i.imgur.com/5Ntztkl.jpeg",
     "price": 18
   },
   {
     "id": 6,
-    "name": "Palm Tree Cap",
-    "imageUrl": "",
+    "name": "Ushanka Hat",
+    "imageUrl": "https://i.imgur.com/PE7kGr0.jpg",
     "price": 14
   },
   {
     "id": 7,
     "name": "Black Flat Cap",
-    "imageUrl": "",
+    "imageUrl": "https://i.imgur.com/tvHZgWJ.jpeg",
     "price": 18
   },
   {
     "id": 8,
     "name": "Baseball Cap",
-    "imageUrl": "",
+    "imageUrl": "https://i.imgur.com/gduwIM0.jpeg",
     "price": 14
   },
   {
     "id": 9,
     "name": "Black Snapback",
-    "imageUrl": "",
+    "imageUrl": "https://i.imgur.com/LFM09Aw.jpeg",
     "price": 16
   }
 ]
