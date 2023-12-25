@@ -34,7 +34,7 @@ const Navigation = () => {
               E-Commerce
             </span>
           </Link>
-          <div className="w-full md:block md:w-auto ">
+          <div className="w-full text-end md:block md:w-auto ">
             <button
               className="md:hidden hover:text-orange-500"
               onClick={toggleMenu}
