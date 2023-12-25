@@ -26,7 +26,7 @@ const Navigation = () => {
   };
   return (
     <>
-      <nav className="bg-white border-gray-200 dark:bg-indigo-900">
+      <nav className="bg-white border-gray-200 dark:bg-indigo-900 min-w-[370px]">
         <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4 ">
           <Link to="/" className="flex items-center">
             <img src={Logo} className="h-10 w-10 mr-3" alt="Logo" />
