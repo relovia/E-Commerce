@@ -2,7 +2,7 @@ const ProductCard = ({ Product }) => {
   const { name, imageUrl, price } = Product;
   return (
     <div className="flex justify-center">
-      <div className="relative max-w-sm min-w-[340px] bg-white shadow-md rounded-3xl p-2 mx-1 my-3 cursor-pointer">
+      <div className="relative max-w-sm min-w-[360px] bg-white shadow-md rounded-3xl p-2 mx-1 my-3 cursor-pointer">
         {/* Card */}
         <div className=" overflow-x-hidden rounded-2xl relative  hover:opacity-75">
           <img
