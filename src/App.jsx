@@ -11,8 +11,8 @@ import Cart from "./pages/Cart/Cart";
 import Hats from "./pages/CategoryList/Hats";
 import Jackets from "./pages/CategoryList/Jackets";
 import Sneakers from "./pages/CategoryList/Sneakers";
-import Womens from "./pages/CategoryList/Womens";
-import Mens from "./pages/CategoryList/Mens";
+import Women from "./pages/CategoryList/Women";
+import Men from "./pages/CategoryList/Men";
 //Components
 import SignUp from "./components/signUp/SignUp";
 
@@ -27,8 +27,8 @@ const App = () => {
             <Route path="hats" element={<Hats />} />
             <Route path="jackets" element={<Jackets />} />
             <Route path="sneakers" element={<Sneakers />} />
-            <Route path="womens" element={<Womens />} />
-            <Route path="mens" element={<Mens />} />
+            <Route path="women" element={<Women />} />
+            <Route path="men" element={<Men />} />
           </Route>
           <Route path="contact" element={<Contact />} />
           <Route path="signin" element={<SignIn />} />
