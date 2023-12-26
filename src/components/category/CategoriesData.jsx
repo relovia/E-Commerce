@@ -1,8 +1,8 @@
 import hats from "../../images/hats.jpg";
 import jackets from "../../images/jackets.jpg";
 import sneakers from "../../images/sneakers.jpg";
-import womens from "../../images/womens.jpg";
-import mens from "../../images/mens.jpg";
+import women from "../../images/women.jpg";
+import men from "../../images/men.jpg";
 
 export const CategoriesData = [
   {
@@ -25,14 +25,14 @@ export const CategoriesData = [
   },
   {
     id: 4,
-    imgSrc: womens,
-    title: "Womens",
+    imgSrc: women,
+    title: "Women",
     buttonText: "Shop Now",
   },
   {
     id: 5,
-    imgSrc: mens,
-    title: "Mens",
+    imgSrc: men,
+    title: "Men",
     buttonText: "Shop Now",
   },
 ];
