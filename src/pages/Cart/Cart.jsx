@@ -1,23 +1,37 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-
-import products from "../../shopData.json";
+import { useSelector, useDispatch } from "react-redux";
+import { removeFromCart, updateQuantity } from "../../redux/cartSlice";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const [open, setOpen] = useState(true);
-  const [cartProducts, setCartProducts] = useState(products);
 
-  const removeFromCart = (productID) => {
-    const updateCart = cartProducts.filter(
-      (product) => product.id !== productID
+  const cartProducts = useSelector((state) => state.cart.cartProducts);
+  const dispatch = useDispatch();
+
+  const handleRemoveFromCart = (productID) => {
+    dispatch(removeFromCart(productID));
+  };
+
+  const handleUpdateFromCart = (productID, newQuantity) => {
+    const productToUpdate = cartProducts.find(
+      (product) => product.id === productID
     );
-    setCartProducts(updateCart);
+
+    if (newQuantity > productToUpdate.quantity) {
+      alert(
+        "Out of stock, please wait until new products are added. Thank you for your patience..."
+      );
+    } else {
+      dispatch(updateQuantity({ productID, newQuantity }));
+    }
   };
 
   const calculateTotalPrice = () => {
     return cartProducts.reduce((total, product) => {
-      const productTotal = parseFloat(product.price) * product.quantity;
+      const productTotal = parseFloat(product.price) * product.quantityAdded;
       return total + productTotal;
     }, 0);
   };
@@ -98,16 +112,47 @@ const Cart = () => {
                                     </p>
                                   </div>
                                   <div className="flex flex-1 items-end justify-between text-sm">
-                                    <p className="text-gray-500">
-                                      Quantity {product.quantity}
-                                    </p>
-
+                                    <div className="flex">
+                                      <p className="text-gray-500">Quantity</p>
+                                      <button
+                                        onClick={() =>
+                                          handleUpdateFromCart(
+                                            product.id,
+                                            product.quantityAdded - 1
+                                          )
+                                        }
+                                        className="ml-2"
+                                      >
+                                        -
+                                      </button>
+                                      <p className="ml-2">
+                                        {product.quantityAdded}
+                                      </p>
+                                      <button
+                                        onClick={() =>
+                                          handleUpdateFromCart(
+                                            product.id,
+                                            product.quantityAdded + 1
+                                          )
+                                        }
+                                        className="mx-2"
+                                      >
+                                        +
+                                      </button>
+                                      {product.quantity <= 10 ? (
+                                        <p className="text-red-600">
+                                          Last {product.quantity} item
+                                        </p>
+                                      ) : (
+                                        <p>In stock</p>
+                                      )}
+                                    </div>
                                     <div className="flex">
                                       <button
                                         type="button"
                                         className="font-medium text-indigo-600 hover:text-indigo-500"
                                         onClick={() =>
-                                          removeFromCart(product.id)
+                                          handleRemoveFromCart(product.id)
                                         }
                                       >
                                         Remove
@@ -140,15 +185,16 @@ const Cart = () => {
                       </div>
                       <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                         <p>
-                          or
-                          <button
-                            type="button"
-                            className="font-medium text-indigo-600 hover:text-indigo-500"
-                            onClick={() => setOpen(false)}
-                          >
-                            Continue Shopping
-                            <span aria-hidden="true"> &rarr;</span>
-                          </button>
+                          <Link to={"/shop"}>
+                            <button
+                              type="button"
+                              className="font-medium text-indigo-600 hover:text-indigo-500"
+                              onClick={() => setOpen(false)}
+                            >
+                              Continue Shopping
+                              <span aria-hidden="true"> &rarr;</span>
+                            </button>
+                          </Link>
                         </p>
                       </div>
                     </div>
