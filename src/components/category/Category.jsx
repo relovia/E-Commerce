@@ -9,7 +9,7 @@ const Category = () => {
       {CategoriesData.map((category, index) => (
         <div
           onClick={() => navigate(`/shop/${category.title.toLowerCase()}`)}
-          className="w-1/5 h-screen flex flex-auto items-center justify-center border border-black border-solid mt-0 mx-0 cursor-pointer overflow-hidden relative group transition-transform duration-700 ease-in-out transform hover:opacity-80"
+          className="min-w-[370px] w-full xs:w-1/2 lg:w-1/4 xl:w-1/5 h-screen flex flex-auto items-center justify-center border border-black border-solid mt-0 mx-0 cursor-pointer overflow-hidden relative group transition-transform duration-700 ease-in-out transform hover:opacity-80"
           key={index}
         >
           <img
